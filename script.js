@@ -52,3 +52,10 @@ function updateFontColor(eleRef, color) {
 function waitForMs(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+// ini untuk menu toggle
+const menuToggle = document.querySelector(".menu-toggle input");
+const nav = document.querySelector("nav ul");
+menuToggle.addEventListener("click", function () {
+  nav.classList.toggle("slide");
+});

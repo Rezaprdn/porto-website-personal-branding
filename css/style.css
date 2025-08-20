@@ -11,6 +11,7 @@ body{
   font-size: 30px;
   height: 80vh;
   font-family: "Darker Grotesque", sans-serif;
+  overflow-x: hidden;
 }
 body .typing-container {
   display: flex;
@@ -56,6 +57,31 @@ body .typing-container .input-cursor {
   100% {
     opacity: 0;
   }
+}
+h1{
+    font-size: 150%;
+    font-family: "Darker Grotesque", sans-serif;
+    padding: 100px, 100px;
+    text-align: center;
+}
+  body .typing-container {
+  display: flex;
+  /* justify-content: left;
+  align-items: center; */
+  padding: 100px, 100px;
+    text-align: center;
+}
+body .typing-container #feature-text {
+  margin-left: 8px;
+}
+body .typing-container .input-cursor {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: white;
+  margin-left: 0px;
+  -webkit-animation: blink 0.6s linear infinite alternate;
+  animation: blink 0.6s linear infinite alternate;
 }
 /*padding*/
 h1{
@@ -161,44 +187,28 @@ nav ul li a {
 
 /* ukuran mobile */
 @media screen and (max-width: 576px){
-  nav .logo h4{
-    /* font-size: 150%; */
-    text-align: justify;
-}
   .menu-toggle{
     display: flex;
+    z-index: 10000;
   }
   nav ul {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    top:10;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2b2b2b;
+    z-index: 90;
+    width: 100%;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity:0;
  }
-
-
-h1{
-    font-size: 150%;
-    font-family: "Darker Grotesque", sans-serif;
-    padding: 100px, 100px;
-    text-align: center;
-}
-  body .typing-container {
-  display: flex;
-  /* justify-content: left;
-  align-items: center; */
-  padding: 100px, 100px;
-    text-align: center;
-}
-body .typing-container #feature-text {
-  margin-left: 8px;
-}
-body .typing-container .input-cursor {
-  display: inline-block;
-  width: 1px;
-  height: 10px;
-  background-color: white;
-  margin-left: 0px;
-  -webkit-animation: blink 0.6s linear infinite alternate;
-  animation: blink 0.6s linear infinite alternate;
-}
- nav ul {
-  display: none;
+ nav ul.slide{
+  opacity:1;
+    transform: translateX(0);
  }
 }
