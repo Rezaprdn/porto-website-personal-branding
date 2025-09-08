@@ -3,36 +3,544 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my page || rzprdn.dev"</title>
+    <title>Reza Perdana | Futuristic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
-    <nav>
-        <div class="logo">
-            <h4>Reza.Dev</h4>
-        </div>
-         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Profile</a></li>
-            <li><a href="">programing</a></li>
-            <li><a href="">Photograph</a></li>
-         </ul>
-         <div class="menu-toggle">
-            <input type="checkbox"/>
-         <span></span>
-         <span></span>
-         <span></span>
+<body class="min-h-screen">
+    <!-- Floating Background Elements -->
+    <div class="fixed inset-0 overflow-hidden -z-10">
+        <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-blue-900 opacity-20 blur-3xl floating" style="animation-delay: 0s;"></div>
+        <div class="absolute top-1/3 right-1/3 w-40 h-40 rounded-full bg-cyan-900 opacity-20 blur-3xl floating" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-28 h-28 rounded-full bg-blue-800 opacity-20 blur-3xl floating" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-36 h-36 rounded-full bg-cyan-800 opacity-20 blur-3xl floating" style="animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-blur-md bg-dark border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text hover-glow">REZA<span class="text-white">.</span></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-primary transition-colors hover-grow">Home</a>
+                    <a href="#about" class="text-white hover:text-primary transition-colors hover-grow">About</a>
+                    <a href="#skills" class="text-white hover:text-primary transition-colors hover-grow">Skills</a>
+                    <a href="#projects" class="text-white hover:text-primary transition-colors hover-grow">Projects</a>
+                    <a href="#contact" class="text-white hover:text-primary transition-colors hover-grow">Contact</a>
+                </div>
+                <button class="md:hidden text-white focus:outline-none">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
         </div>
     </nav>
-    <div class="container">
-    <h1>Hello friend, My name is Reza Herdiansyah</h1>
-    <div class="typing-container">
-        <span id="sentence" class="sentence">I am a </span>
-        <span id="feature-text"></span>
-        <span class="input-cursor"></span>
-    </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        <span class="gradient-text">Reza Perdana</span>
+                        <span class="text-white">Herdiansyah</span>
+                    </h1>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mr-4"></div>
+                        <h2 class="text-xl md:text-2xl text-gray-300">Software & Web Developer | Photographer</h2>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-lg">
+                        Crafting digital experiences with code and capturing moments through my lens. 
+                        Bridging technology and creativity to build innovative solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-full text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="px-6 py-3 border border-primary text-primary rounded-full font-bold hover-grow transition-all hover:bg-primary hover:bg-opacity-10">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary pulse">
+                            <img src="\img\WhatsApp Image 2025-08-28 at 14.06.44_b9aa7d4c.jpg" 
+                                 alt="Reza Perdana" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-dark p-4 rounded-full border-2 border-secondary">
+                            <i data-feather="code" class="w-8 h-8 text-secondary"></i>
+                        </div>
+                        <div class="absolute -top-5 -left-5 bg-dark p-4 rounded-full border-2 border-primary">
+                            <i data-feather="camera" class="w-8 h-8 text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-dark to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">About</span> 
+                    <span class="text-white">Me</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <div class="relative">
+                        <div class="w-full h-80 bg-gradient-to-br from-primary to-secondary rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                 alt="About Reza" 
+                                 class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-dark p-4 rounded-lg border-2 border-secondary shadow-lg">
+                            <div class="flex items-center">
+                                <i data-feather="award" class="w-6 h-6 text-primary mr-2"></i>
+                                <span class="text-white font-bold">5+ Years Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Who am I?</h3>
+                    <p class="text-gray-400 mb-6">
+                        I'm Reza Perdana Herdiansyah, a passionate full-stack developer and photographer based in Indonesia. 
+                        With expertise in JavaScript, PHP, and Python, I create robust web applications that solve real-world problems.
+                    </p>
+                    <p class="text-gray-400 mb-8">
+                        When I'm not coding, you can find me capturing moments through my camera lens, exploring new technologies, 
+                        or contributing to open-source projects. I believe in continuous learning and pushing the boundaries of what's possible.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i data-feather="globe" class="w-5 h-5 text-primary mr-2"></i>
+                            <span class="text-gray-300">Based in Indonesia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="w-5 h-5 text-primary mr-2"></i>
+                            <span class="text-gray-300">reza@example.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="github" class="w-5 h-5 text-primary mr-2"></i>
+                            <span class="text-gray-300">github.com/rezaperdana</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="instagram" class="w-5 h-5 text-primary mr-2"></i>
+                            <span class="text-gray-300">@reza.ph</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-full font-bold hover-grow transition-all hover:bg-primary hover:bg-opacity-10">
+                        <i data-feather="download" class="w-5 h-5 mr-2"></i>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">Technical</span> 
+                    <span class="text-white">Skills</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-gray-800 rounded-xl p-6 hover-grow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 rounded-lg bg-primary bg-opacity-10 mr-4">
+                            <i data-feather="code" class="w-6 h-6 text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Programming</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">JavaScript</span>
+                                <span class="text-primary">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">PHP</span>
+                                <span class="text-primary">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Python</span>
+                                <span class="text-primary">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Web Development -->
+                <div class="bg-gray-800 rounded-xl p-6 hover-grow" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 rounded-lg bg-secondary bg-opacity-10 mr-4">
+                            <i data-feather="globe" class="w-6 h-6 text-secondary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Web Dev</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">HTML/CSS</span>
+                                <span class="text-secondary">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">React</span>
+                                <span class="text-secondary">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Node.js</span>
+                                <span class="text-secondary">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Photography -->
+                <div class="bg-gray-800 rounded-xl p-6 hover-grow" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div class="p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-4">
+                            <i data-feather="camera" class="w-6 h-6 text-cyan-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Photography</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Portrait</span>
+                                <span class="text-cyan-500">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-cyan-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Landscape</span>
+                                <span class="text-cyan-500">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-cyan-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Editing</span>
+                                <span class="text-cyan-500">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="bg-cyan-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack -->
+            <div class="mt-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-center mb-8 text-white">Tech Stack</h3>
+                <div class="tech-grid">
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="100">
+                        <i data-feather="hexagon" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">React</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="150">
+                        <i data-feather="database" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">MongoDB</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="200">
+                        <i data-feather="box" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">Docker</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="250">
+                        <i data-feather="git-branch" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">Git</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="300">
+                        <i data-feather="terminal" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">Linux</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="350">
+                        <i data-feather="layers" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">Tailwind</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="400">
+                        <i data-feather="server" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">AWS</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="450">
+                        <i data-feather="cpu" class="w-10 h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-sm">TensorFlow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">Featured</span> 
+                    <span class="text-white">Projects</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Here are some of my recent projects that showcase my skills in development and photography.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-primary/20" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                             alt="Project 1" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="px-3 py-1 bg-primary text-dark text-sm font-bold rounded-full">Web Development</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">A full-featured online store with payment integration and inventory management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">MongoDB</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-primary font-medium">
+                            View Project <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="\img\WhatsApp Image 2025-09-02 at 12.17.04_3240d269.jpg" 
+                             alt="Project 2" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="px-3 py-1 bg-secondary text-dark text-sm font-bold rounded-full">Photography</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Journey Photography</h3>
+                        <p class="text-gray-400 mb-4">A collection of photographs that capture moments of your life.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Portrait</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Long Exposure</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Lightroom</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-secondary font-medium">
+                            click to see my photo results <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80" 
+                             alt="Project 3" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="px-3 py-1 bg-cyan-500 text-dark text-sm font-bold rounded-full">AI/ML</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Image Recognition API</h3>
+                        <p class="text-gray-400 mb-4">A machine learning service that identifies objects in images with high accuracy.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">TensorFlow</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Flask</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-cyan-500 font-medium">
+                            View Project <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-full font-bold hover-grow transition-all hover:bg-primary hover:bg-opacity-10">
+                    <i data-feather="folder" class="w-5 h-5 mr-2"></i>
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">Get In</span> 
+                    <span class="text-white">Touch</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Have a project in mind or want to collaborate? Feel free to reach out!
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-lg bg-primary bg-opacity-10 mr-4">
+                                <i data-feather="mail" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-300 font-medium mb-1">Email</h4>
+                                <a href="mailto:reza@example.com" class="text-gray-400 hover:text-primary transition-colors">reza@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-lg bg-secondary bg-opacity-10 mr-4">
+                                <i data-feather="phone" class="w-6 h-6 text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-300 font-medium mb-1">Phone</h4>
+                                <a href="tel:+6281234567890" class="text-gray-400 hover:text-secondary transition-colors">+62 812 3456 7890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-4">
+                                <i data-feather="map-pin" class="w-6 h-6 text-cyan-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-300 font-medium mb-1">Location</h4>
+                                <p class="text-gray-400">Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="text-xl font-bold text-white mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-primary hover:bg-opacity-10 transition-all">
+                                <i data-feather="github" class="w-5 h-5 text-primary"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-secondary hover:bg-opacity-10 transition-all">
+                                <i data-feather="linkedin" class="w-5 h-5 text-secondary"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-pink-500 hover:bg-opacity-10 transition-all">
+                                <i data-feather="instagram" class="w-5 h-5 text-pink-500"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-blue-500 hover:bg-opacity-10 transition-all">
+                                <i data-feather="twitter" class="w-5 h-5 text-blue-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-4 bg-gradient-to-r from-primary to-secondary rounded-lg text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-dark border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text hover-glow">REZA<span class="text-white">.</span></a>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    &copy; 2023 Reza Perdana Herdiansyah. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="fixed bottom-8 right-8 w-12 h-12 bg-primary bg-opacity-20 backdrop-blur-md rounded-full flex items-center justify-center hover-grow transition-all border border-primary border-opacity-30" id="back-to-top">
+        <i data-feather="arrow-up" class="w-5 h-5 text-primary"></i>
+    </a>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 </html>
