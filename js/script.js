@@ -30,3 +30,27 @@
                 delay: anime.stagger(100)
             });
         });
+
+       window.onload = function() {
+  anime({
+    targets: '.hero-title',
+    translateY: [-50, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: 'easeOutExpo'
+  });
+};
+document.getElementById("myForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const obj = Object.fromEntries(formData.entries());
+
+  const res = await fetch("/api/v1/projects", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj)
+  });
+
+  const data = await res.json();
+  console.log(data);
+});
