@@ -1,7 +1,7 @@
   AOS.init({
             duration: 800,
             easing: 'ease-in-out',
-            once: true
+            once: false
         });
         
         feather.replace();
@@ -31,15 +31,6 @@
             });
         });
 
-       window.onload = function() {
-  anime({
-    targets: '.hero-title',
-    translateY: [-50, 0],
-    opacity: [0, 1],
-    duration: 1000,
-    easing: 'easeOutExpo'
-  });
-};
 document.getElementById("myForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);

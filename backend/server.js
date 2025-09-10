@@ -3,7 +3,7 @@ import cors from "cors";
 import contactRoutes from "./route/contact.js";
 
 const app = express();
-const PORT = 5000;
+const PORT = 5500;
 
 // Middleware
 app.use(cors());

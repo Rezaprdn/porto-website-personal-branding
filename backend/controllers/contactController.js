@@ -1,13 +1,33 @@
-export const handleContact = (req, res) => {
-  const { name, email, subject, message } = req.body;
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
 
-  if (!name || !email || !subject || !message) {
-    return res.status(400).json({ success: false, message: "All fields are required" });
-  }
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  // sementara console log, nanti bisa integrasi ke Nodemailer/DB
-  console.log("📩 New Contact Form Submission:");
-  console.log({ name, email, subject, message });
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      subject: document.getElementById("subject").value,
+      message: document.getElementById("message").value,
+    };
 
-  res.json({ success: true, message: "Message received successfully" });
-};
+    try {
+      const res = await fetch("https://formspree.io/f/xrbajabe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        alert("✅ Pesan berhasil dikirim!");
+        form.reset();
+      } else {
+        const err = await res.json();
+        alert("❌ Gagal kirim: " + (err.error || "Unknown error"));
+      }
+    } catch (err) {
+      console.error(err);
+      alert("⚠️ Error koneksi ke server");
+    }
+  });
+});
