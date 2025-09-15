@@ -6,80 +6,104 @@
     <title>Reza Perdana | Futuristic Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body class="min-h-screen">
     <!-- Floating Background Elements -->
     <div class="fixed inset-0 -z-10">
-        <div class="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-blue-900 opacity-20 blur-3xl floating" style="animation-delay: 0s;"></div>
-        <div class="absolute top-1/3 right-1/3 w-40 h-40 rounded-full bg-cyan-900 opacity-20 blur-3xl floating" style="animation-delay: 1s;"></div>
-        <div class="absolute bottom-1/4 left-1/3 w-28 h-28 rounded-full bg-blue-800 opacity-20 blur-3xl floating" style="animation-delay: 2s;"></div>
-        <div class="absolute bottom-1/3 right-1/4 w-36 h-36 rounded-full bg-cyan-800 opacity-20 blur-3xl floating" style="animation-delay: 3s;"></div>
+        <div class="absolute top-1/4 left-1/4 w-20 h-20 sm:w-32 sm:h-32 rounded-full bg-blue-900 opacity-20 blur-3xl floating"
+            style="animation-delay: 0s;"></div>
+        <div class="absolute top-1/3 right-1/3 w-24 h-24 sm:w-40 sm:h-40 rounded-full bg-cyan-900 opacity-20 blur-3xl floating"
+            style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-16 h-16 sm:w-28 sm:h-28 rounded-full bg-blue-800 opacity-20 blur-3xl floating"
+            style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-20 h-20 sm:w-36 sm:h-36 rounded-full bg-cyan-800 opacity-20 blur-3xl floating"
+            style="animation-delay: 3s;"></div>
     </div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-opacity-90 backdrop-blur-md bg-dark border-b border-gray-800">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold gradient-text hover-glow">Reza.Dev<span class="text-white"></span></a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-white hover:text-primary transition-colors hover-grow">Home</a>
-                    <a href="#about" class="text-white hover:text-primary transition-colors hover-grow">About</a>
-                    <a href="#skills" class="text-white hover:text-primary transition-colors hover-grow">Skills</a>
-                    <a href="#projects" class="text-white hover:text-primary transition-colors hover-grow">Projects</a>
-                    <a href="#contact" class="text-white hover:text-primary transition-colors hover-grow">Contact</a>
+                <a href="#" class="text-xl sm:text-2xl font-bold gradient-text hover-glow">Reza.Dev</a>
+                <div class="hidden sm:flex space-x-4 md:space-x-8">
+                    <a href="#home"
+                        class="text-white hover:text-primary transition-colors hover-grow text-sm md:text-base">Home</a>
+                    <a href="#about"
+                        class="text-white hover:text-primary transition-colors hover-grow text-sm md:text-base">About</a>
+                    <a href="#skills"
+                        class="text-white hover:text-primary transition-colors hover-grow text-sm md:text-base">Skills</a>
+                    <a href="#projects"
+                        class="text-white hover:text-primary transition-colors hover-grow text-sm md:text-base">Projects</a>
+                    <a href="#contact"
+                        class="text-white hover:text-primary transition-colors hover-grow text-sm md:text-base">Contact</a>
                 </div>
-                <!-- <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                    <i data-feather="menu"></i>
+                <!-- Tombol Mobile Menu -->
+                <!-- <button id="mobile-menu-btn"
+                    class="sm:hidden text-white focus:outline-none relative w-10 h-10 flex items-center justify-center z-50">
+                    <i data-feather="menu"
+                        class="menu-icon absolute w-6 h-6 transition-all duration-300 ease-in-out opacity-100 scale-100 pointer-events-auto"></i>
+                    <i data-feather="x"
+                        class="close-icon absolute w-6 h-6 transition-all duration-300 ease-in-out opacity-0 scale-50 rotate-90 pointer-events-none"></i>
                 </button> -->
-            </div>
+                <!-- Overlay Mobile Menu -->
+            <!-- Overlay Mobile Menu -->
+            <!-- <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/30 backdrop-blur-lg flex flex-col items-center justify-center space-y-6 text-xl
+                        opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out sm:hidden">
+                <a href="#home" class="text-white hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="text-white hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="text-white hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="text-white hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
+            </div> -->
         </div>
     </nav>
-    
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 py-20">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
-                        <span class="gradient-text">Reza Perdana</span>
+    <section id="home" class="min-h-screen flex items-center pt-20 px-4 sm:px-6">
+        <div class="container mx-auto py-10 sm:py-20">
+            <div class="flex flex-col md:flex-row lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left" data-aos="fade-right">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                        <span class="gradient-text">Reza Perdana</span><br class="sm:hidden">
                         <span class="text-white">Herdiansyah</span>
                     </h1>
-                    <!-- <div class="flex items-center mb-6"> -->
-                        <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary mr-4"></div>
-                        <h2 class="text-xl md:text-2xl text-gray-300">Software & Web Developer | Photographer</h2>
-                    <!-- </div> -->
-                    <p class="text-gray-400 mb-8 max-w-lg">
-                        Crafting digital experiences with code and capturing moments through my lens. 
+                    <div class="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto lg:mx-0 mb-4"></div>
+                    <h2 class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4 sm:mb-6">Software & Web Developer |
+                        Photographer</h2>
+                    <p class="text-gray-400 mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0 text-sm sm:text-base">
+                        Crafting digital experiences with code and capturing moments through my lens.
                         Bridging technology and creativity to build innovative solutions.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-full text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30">
+                    <div
+                        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center lg:justify-start">
+                        <a href="#contact"
+                            class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-primary to-secondary rounded-full text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30 text-sm sm:text-base">
                             Contact Me
                         </a>
-                        <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-full text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30">
+                        <a href="#projects"
+                            class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-primary to-secondary rounded-full text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30 text-sm sm:text-base">
                             View Work
                         </a>
                     </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                <div class="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0 " data-aos="fade-left">
                     <div class="relative">
-                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary pulse">
-                            <img src="\img\WhatsApp Image 2025-08-28 at 14.06.44_b9aa7d4c.jpg" 
-                                 alt="Reza Perdana" 
-                                 class="w-full h-full object-cover">
+                        <div
+                            class="hero-image w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary pulse">
+                            <img src="/img/WhatsApp Image 2025-08-28 at 14.06.44_b9aa7d4c.jpg"
+                                alt="Reza Perdana" class="w-full h-full object-cover">
                         </div>
-                        <div class="absolute -bottom-5 -right-5 bg-dark p-4 rounded-full border-2 border-secondary">
-                            <i data-feather="code" class="w-8 h-8 text-secondary"></i>
+                        <div
+                            class="hero-icons absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 bg-dark p-2 sm:p-4 rounded-full border-2 border-secondary">
+                            <i data-feather="code" class="w-6 h-6 sm:w-8 sm:h-8 text-secondary"></i>
                         </div>
-                        <div class="absolute -top-5 -left-5 bg-dark p-4 rounded-full border-2 border-primary">
-                            <i data-feather="camera" class="w-8 h-8 text-primary"></i>
+                        <div
+                            class="hero-icons absolute -top-3 -left-3 sm:-top-5 sm:-left-5 bg-dark p-2 sm:p-4 rounded-full border-2 border-primary">
+                            <i data-feather="camera" class="w-6 h-6 sm:w-8 sm:h-8 text-primary"></i>
                         </div>
                     </div>
                 </div>
@@ -88,97 +112,92 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gradient-to-b from-dark to-gray-900">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span class="gradient-text">About</span> 
+    <section id="about" class="py-16 sm:py-20 bg-gradient-to-b from-dark to-gray-900 px-4 sm:px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">About</span>
                     <span class="text-white">Me</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
             </div>
-            
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 mb-8 lg:mb-0" data-aos="fade-right">
                     <div class="relative">
-                        <div class="w-full h-80 bg-gradient-to-br from-primary to-secondary rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
-                                 alt="About Reza" 
-                                 class="w-full h-full object-cover mix-blend-overlay opacity-90">
+                        <div class="w-full h-64 sm:h-80 bg-gradient-to-br from-primary to-secondary rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+                                alt="About Reza" class="w-full h-full object-cover mix-blend-overlay opacity-90">
                         </div>
-                        <div class="absolute top-4 left-4 bg-dark bg-opacity-70 p-4 rounded-lg backdrop-blur-md">
+                        <div class="absolute top-4 left-4 bg-dark bg-opacity-70 p-3 sm:p-4 rounded-lg backdrop-blur-md">
                             <div class="flex items-center">
-                                <i data-feather="award" class="w-6 h-6 text-primary mr-2"></i>
-                                <span class="text-white font-bold">Fresh Graduate</span>
+                                <i data-feather="award" class="w-5 h-5 sm:w-6 sm:h-6 text-primary mr-2"></i>
+                                <span class="text-white font-bold text-sm sm:text-base">Fresh Graduate</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
-                    <h3 class="text-2xl font-bold mb-6 text-white">Who am I?</h3>
-                    <p class="text-gray-400 mb-6">
-                        I'm Reza Perdana Herdiansyah, a passionate full-stack developer and photographer based in Indonesia. 
-                        With expertise in JavaScript, PHP, and Python, I create robust web applications that solve real-world problems.
+
+                <div class="w-full lg:w-1/2 lg:pl-12" data-aos="fade-left">
+                    <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white text-center lg:text-left">Who am I?
+                    </h3>
+                    <p class="text-gray-400 mb-4 sm:mb-6 text-sm sm:text-base">
+                        I'm Reza Perdana Herdiansyah, a passionate full-stack developer and photographer based in
+                        Indonesia.
+                        With expertise in JavaScript, PHP, and Python, I create robust web applications that solve
+                        real-world problems.
                     </p>
-                    <p class="text-gray-400 mb-8">
-                        When I'm not coding, you can find me capturing moments through my camera lens, exploring new technologies, 
-                        or contributing to open-source projects. I believe in continuous learning and pushing the boundaries of what's possible.
+                    <p class="text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">
+                        When I'm not coding, you can find me capturing moments through my camera lens, exploring new
+                        technologies,
+                        or contributing to open-source projects. I believe in continuous learning and pushing the
+                        boundaries of what's possible.
                     </p>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-center">
-                            <i data-feather="globe" class="w-5 h-5 text-primary mr-2"></i>
-                            <span class="text-gray-300">Based in Indonesia</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                        <div class="flex items-center justify-center lg:justify-start">
+                            <i data-feather="globe" class="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2"></i>
+                            <span class="text-gray-300 text-sm sm:text-base">Based in Indonesia</span>
                         </div>
-                        <!-- <div class="flex items-center">
-                            <i data-feather="mail" class="w-5 h-5 text-primary mr-2"></i>
-                            <span class="text-gray-300">reza@example.com</span>
-                        </div> -->
-                        <div class="flex items-center">
-                            <i data-feather="github" class="w-5 h-5 text-primary mr-2"></i>
-                            <span class="text-gray-300">github.com/rezaprdn</span>
+                        <div class="flex items-center justify-center lg:justify-start">
+                            <i data-feather="github" class="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2"></i>
+                            <span class="text-gray-300 text-sm sm:text-base">github.com/rezaprdn</span>
                         </div>
-                        <div class="flex items-center">
-                            <i data-feather="instagram" class="w-5 h-5 text-primary mr-2"></i>
-                            <span class="text-gray-300">@_rzprdn</span>
+                        <div class="flex items-center justify-center lg:justify-start sm:col-span-2">
+                            <i data-feather="instagram" class="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2"></i>
+                            <span class="text-gray-300 text-sm sm:text-base">@_rzprdn</span>
                         </div>
                     </div>
-                    
-                    <!-- <a href="#" class="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-full font-bold hover-grow transition-all hover:bg-primary hover:bg-opacity-10">
-                        <i data-feather="download" class="w-5 h-5 mr-2"></i>
-                        Download CV
-                    </a> -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span class="gradient-text">Technical</span> 
+    <section id="skills" class="py-16 sm:py-20 bg-gray-900 px-4 sm:px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">Technical</span>
                     <span class="text-white">Skills</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Programming Languages -->
-                <div class="bg-gray-800 rounded-xl p-6 hover-grow" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-6">
-                        <div class="p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-4">
-                            <i data-feather="code" class="w-6 h-6 text-cyan-500"></i>
+                <div class="bg-gray-800 rounded-xl p-4 sm:p-6 hover-grow" data-aos="fade-right">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="p-2 sm:p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-3 sm:mr-4">
+                            <i data-feather="code" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-500"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Programming</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Programming</h3>
                     </div>
-                    <div class="space-y-4">
+                    <div class="space-y-3 sm:space-y-4">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">JavaScript</span>
-                                <span class="text-cyan-500">90%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">JavaScript</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">90%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 90%"></div>
@@ -186,8 +205,8 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">PHP</span>
-                                <span class="text-cyan-500">85%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">PHP</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">85%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 85%"></div>
@@ -195,8 +214,8 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">Python</span>
-                                <span class="text-cyan-500">80%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">Python</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">80%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 80%"></div>
@@ -204,20 +223,20 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Web Development -->
-                <div class="bg-gray-800 rounded-xl p-6 hover-grow" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center mb-6">
-                        <div class="p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-4">
-                            <i data-feather="globe" class="w-6 h-6 text-cyan-500"></i>
+                <div class="bg-gray-800 rounded-xl p-4 sm:p-6 hover-grow" data-aos="fade-up">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="p-2 sm:p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-3 sm:mr-4">
+                            <i data-feather="globe" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-500"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Web Dev</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Web Dev</h3>
                     </div>
-                    <div class="space-y-4">
+                    <div class="space-y-3 sm:space-y-4">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">HTML/CSS</span>
-                                <span class="text-cyan-500">95%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">HTML/CSS</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">95%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 95%"></div>
@@ -225,8 +244,8 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">React</span>
-                                <span class="text-cyan-500">85%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">React</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">85%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 85%"></div>
@@ -234,8 +253,8 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">Node.js</span>
-                                <span class="text-cyan-500">80%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">Node.js</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">80%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 80%"></div>
@@ -243,20 +262,20 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Photography -->
-                <div class="bg-gray-800 rounded-xl p-6 hover-grow" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center mb-6">
-                        <div class="p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-4">
-                            <i data-feather="camera" class="w-6 h-6 text-cyan-500"></i>
+                <div class="bg-gray-800 rounded-xl p-4 sm:p-6 hover-grow" data-aos="fade-left">
+                    <div class="flex items-center mb-4 sm:mb-6">
+                        <div class="p-2 sm:p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-3 sm:mr-4">
+                            <i data-feather="camera" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-500"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white">Photography</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Photography</h3>
                     </div>
-                    <div class="space-y-4">
+                    <div class="space-y-3 sm:space-y-4">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">Portrait</span>
-                                <span class="text-cyan-500">90%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">Portrait</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">90%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 90%"></div>
@@ -264,8 +283,8 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">Couple Sesion</span>
-                                <span class="text-cyan-500">95%</span>
+                                <span class="text-gray-300 text-sm sm:text-base mobile-text-sm">Couple Session</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">95%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 95%"></div>
@@ -273,8 +292,8 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-300">Editing</span>
-                                <span class="text-cyan-500">90%</span>
+                                <span class="text-gray-300 text-sm sm:text-base">Editing</span>
+                                <span class="text-cyan-500 text-sm sm:text-base">90%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2">
                                 <div class="bg-cyan-500 h-2 rounded-full" style="width: 90%"></div>
@@ -283,238 +302,232 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Tech Stack -->
-            <div class="mt-20" data-aos="fade-up">
-                <h3 class="text-2xl font-bold text-center mb-8 text-white">Tech Stack</h3>
-                <div class="tech-grid justify-center max-w-3xl mx-auto pl-20 pr-20">
-                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="100">
-                        <i data-feather="hexagon" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">React</span>
+            <div class="mt-16 sm:mt-20" data-aos="fade-up">
+                <h3 class="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-white">Tech Stack</h3>
+                <div class="tech-grid justify-center max-w-4xl max-w-3xl mx-auto pl-40 pr-40">
+                    <div class="flex flex-col items-center p-3 sm:p-4 bg-gray-800 rounded-lg hover-grow">
+                        <i data-feather="hexagon" class="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-xs sm:text-sm text-center">React</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="150">
-                        <i data-feather="database" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">MongoDB</span>
+                    <div class="flex flex-col items-center p-3 sm:p-4 bg-gray-800 rounded-lg hover-grow">
+                        <i data-feather="database" class="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-xs sm:text-sm text-center">MongoDB</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="200">
-                        <i data-feather="box" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">Docker</span>
+                    <div class="flex flex-col items-center p-3 sm:p-4 bg-gray-800 rounded-lg hover-grow">
+                        <i data-feather="box" class="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-xs sm:text-sm text-center">Docker</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="250">
-                        <i data-feather="git-branch" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">Git</span>
+                    <div class="flex flex-col items-center p-3 sm:p-4 bg-gray-800 rounded-lg hover-grow">
+                        <i data-feather="git-branch" class="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-xs sm:text-sm text-center">Git</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="300">
-                        <i data-feather="terminal" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">Linux</span>
+                    <div class="flex flex-col items-center p-3 sm:p-4 bg-gray-800 rounded-lg hover-grow">
+                        <i data-feather="terminal" class="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-xs sm:text-sm text-center">Linux</span>
                     </div>
-                    <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="350">
-                        <i data-feather="layers" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">Tailwind</span>
+                    <div class="flex flex-col items-center p-3 sm:p-4 bg-gray-800 rounded-lg hover-grow">
+                        <i data-feather="layers" class="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-2"></i>
+                        <span class="text-gray-300 text-xs sm:text-sm text-center">Tailwind</span>
                     </div>
-                    <!-- <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="400">
-                        <i data-feather="server" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">AWS</span>
-                    </div> -->
-                    <!-- <div class="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover-grow" data-aos="zoom-in" data-aos-delay="450">
-                        <i data-feather="cpu" class="w-10 h-10 text-primary mb-2"></i>
-                        <span class="text-gray-300 text-sm">TensorFlow</span>
-                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span class="gradient-text">Featured</span> 
+    <section id="projects" class="py-16 sm:py-20 bg-dark px-4 sm:px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">Featured</span>
                     <span class="text-white">Projects</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto text-sm sm:text-base">
                     Here are some of my recent projects that showcase my skills in development and photography.
                 </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Project 1 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20" data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20" data-aos="fade-right">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://media.sketchfab.com/models/441d03d1076b44f483df551e02d970fe/thumbnails/933a912e6e414fa6bf59ae1624b91d72/2a2af866dd774a759dedcd7899bbc5b2.jpeg" 
-                             alt="Project 1" 
-                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
+                            alt="Project 1"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="px-3 py-1 bg-cyan-500 text-dark text-sm font-bold rounded-full">Web Development</span>
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-cyan-500 text-dark text-xs sm:text-sm font-bold rounded-full">Web
+                                Development</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">my github portofolio</h3>
-                        <p class="text-gray-400 mb-4">Here is the self-project portfolio that I worked on.</p>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">My GitHub Portfolio</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">Here is the self-project portfolio that I
+                            worked on.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Python</span>
-                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">js</span>
+                            <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">JS</span>
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">PHP</span>
                         </div>
-                        <a href="https://github.com/Rezaprdn" class="inline-flex items-center text-cyan-500 font-medium block ml-auto">
-                            View portofolio <i class="w-4 h-4 ml-2"></i>
+                        <a href="https://github.com/Rezaprdn"
+                            class="inline-flex items-center text-cyan-500 font-medium text-sm sm:text-base">
+                            View Portfolio <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20" data-aos="fade-up" data-aos-delay="200">
+                <div
+                    class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20" data-aos="fade-up">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="\img\WhatsApp Image 2025-09-02 at 12.17.04_3240d269.jpg" 
-                             alt="Project 2" 
-                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&h=400&fit=crop"
+                            alt="Project 2"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="px-3 py-1 bg-cyan-500 text-dark text-sm font-bold rounded-full">Photography</span>
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-cyan-500 text-dark text-xs sm:text-sm font-bold rounded-full">Photography</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Journey Photography</h3>
-                        <p class="text-gray-400 mb-4">A collection of photographs that capture moments of your life.</p>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Journey Photography</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">A collection of photographs that capture
+                            moments of your life.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Portrait</span>
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Long Exposure</span>
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Lightroom</span>
                         </div>
-                    <a href="https://www.instagram.com/_rzprdn?igsh=NmN0Y2Vhd3EzaXM5" class="inline-flex items-center text-cyan-500 font-medium block ml-auto">
-                        View Project <i class="w-4 h-4 ml-2"></i>
-                    </a>
+                        <a href="https://www.instagram.com/_rzprdn?igsh=NmN0Y2Vhd3EzaXM5"
+                            class="inline-flex items-center text-cyan-500 font-medium text-sm sm:text-base">
+                            View Project <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20" data-aos="fade-up" data-aos-delay="300">
+                <div
+                    class="bg-gray-800 rounded-xl overflow-hidden hover-grow transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20" data-aos="fade-left">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1765&q=80" 
-                             alt="Project 3" 
-                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&h=400&fit=crop"
+                            alt="Project 3"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="px-3 py-1 bg-cyan-500 text-dark text-sm font-bold rounded-full">AI/ML</span>
+                            <span
+                                class="px-2 sm:px-3 py-1 bg-cyan-500 text-dark text-xs sm:text-sm font-bold rounded-full">AI/ML</span>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">Image Recognition API</h3>
-                        <p class="text-gray-400 mb-4">NOT AVAILABLE</p>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Image Recognition API</h3>
+                        <p class="text-gray-400 mb-4 text-sm sm:text-base">NOT AVAILABLE</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Python</span>
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">TensorFlow</span>
                             <span class="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">Flask</span>
                         </div>
-                        <a href="#" class="inline-flex items-center text-cyan-500 font-medium block ml-auto">
-                            View Project <i class="w-4 h-4 ml-2"></i>
+                        <a href="#" class="inline-flex items-center text-cyan-500 font-medium text-sm sm:text-base">
+                            View Project <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <!-- <div class="text-center mt-16" data-aos="fade-up">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-full font-bold hover-grow transition-all hover:bg-primary hover:bg-opacity-10">
-                    <i data-feather="folder" class="w-5 h-5 mr-2"></i>
-                    View All Projects
-                </a>
-            </div> -->
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    <span class="gradient-text">Get In</span> 
+    <section id="contact" class="py-16 sm:py-20 bg-gradient-to-b from-gray-900 to-dark px-4 sm:px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-12 sm:mb-16" data-aos="fade-down">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gradient-text">Get In</span>
                     <span class="text-white">Touch</span>
                 </h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
-                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                <div class="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto text-sm sm:text-base">
                     Have a project in mind or want to collaborate? Feel free to reach out!
                 </p>
             </div>
-            
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
-                    <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="p-3 rounded-lg bg-primary bg-opacity-10 mr-4">
-                                <i data-feather="mail" class="w-6 h-6 text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-300 font-medium mb-1">Email</h4>
-                                <a href="mailto:reza@example.com" class="text-gray-400 hover:text-primary transition-colors">rezaherdiansyah76@gmail.com</a>
+
+            <div class="flex flex-col lg:flex-row">
+                <div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-10" data-aos="fade-right">
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center lg:text-left">Contact
+                        Information</h3>
+
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="flex items-start justify-center lg:justify-start">
+                            <div class="p-2 sm:p-3 rounded-lg bg-primary bg-red-500 bg-opacity-10 mr-3 sm:mr-4 flex-shrink-0">
+                                <i data-feather="mail" class="w-5 h-5 sm:w-6 sm:h-6 text-pink-500"></i>
                             </div>
                         </div>
-                        
-                        <!-- <div class="flex items-start">
-                            <div class="p-3 rounded-lg bg-secondary bg-opacity-10 mr-4">
-                                <i data-feather="phone" class="w-6 h-6 text-secondary"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-300 font-medium mb-1">Phone</h4>
-                                <a href="tel:+6281234567890" class="text-gray-400 hover:text-secondary transition-colors">+62 812 3456 7890</a>
+                        <div class="text-center lg:text-left">
+                            <h4 class="text-gray-300 font-medium mb-1 text-sm sm:text-base">Email</h4>
+                            <a href="mailto:rezaherdiansyah76@gmail.com" class="text-gray-400 hover:text-primary transition-colors text-sm sm:text-base break-all">rezaherdiansyah76@gmail.com</a>
+                        </div>
+
+                        <div class="flex items-start justify-center lg:justify-start">
+                            <div class="p-2 sm:p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-3 sm:mr-4 flex-shrink-0">
+                                <i data-feather="map-pin" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-500"></i>
                             </div>
                         </div>
-                         -->
-                        <div class="flex items-start">
-                            <div class="p-3 rounded-lg bg-cyan-500 bg-opacity-10 mr-4">
-                                <i data-feather="map-pin" class="w-6 h-6 text-cyan-500"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-300 font-medium mb-1">Location</h4>
-                                <p class="text-gray-400">Bekasi, Indonesia</p>
-                            </div>
+                        <div class="text-center lg:text-left">
+                            <h4 class="text-gray-300 font-medium mb-1 text-sm sm:text-base">Location</h4>
+                            <p class="text-gray-400 text-sm sm:text-base">Bekasi, Indonesia</p>
                         </div>
                     </div>
-                    
-                    <div class="mt-10">
-                        <h4 class="text-xl font-bold text-white mb-4">Follow Me</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/Rezaprdn" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-primary hover:bg-opacity-10 transition-all">
-                                <i data-feather="github" class="w-5 h-5 text-primary"></i>
+
+                    <div class="mt-8 sm:mt-10 text-center lg:text-left">
+                        <h4 class="text-lg sm:text-xl font-bold text-white mb-4">Follow Me</h4>
+                        <div class="flex space-x-3 sm:space-x-4 justify-center lg:justify-start">
+                            <a href="https://github.com/Rezaprdn"
+                                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-primary hover:bg-opacity-10 transition-all">
+                                <i data-feather="github" class="w-4 h-4 sm:w-5 sm:h-5 text-primary"></i>
                             </a>
-                            <!-- <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-secondary hover:bg-opacity-10 transition-all">
-                                <i data-feather="linkedin" class="w-5 h-5 text-secondary"></i>
-                            </a> -->
-                            <a href="https://www.instagram.com/_rzprdn?igsh=NmN0Y2Vhd3EzaXM5" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-pink-500 hover:bg-opacity-10 transition-all">
-                                <i data-feather="instagram" class="w-5 h-5 text-pink-500"></i>
+                            <a href="https://www.instagram.com/_rzprdn?igsh=NmN0Y2Vhd3EzaXM5"
+                                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-pink-500 hover:bg-opacity-10 transition-all">
+                                <i data-feather="instagram" class="w-4 h-4 sm:w-5 sm:h-5 text-pink-500"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-blue-500 hover:bg-opacity-10 transition-all">
-                                <i data-feather="twitter" class="w-5 h-5 text-blue-500"></i>
+                            <a href="#"
+                                class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-800 flex items-center justify-center hover-grow hover:bg-blue-500 hover:bg-opacity-10 transition-all">
+                                <i data-feather="twitter" class="w-4 h-4 sm:w-5 sm:h-5 text-blue-500"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div class="w-full lg:w-1/2">
+                    <form id="contact-form" class="space-y-4 sm:space-y-6" data-aos="fade-left">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                             <div>
-                                <label for="name" class="block text-gray-300 mb-2">Your Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all">
+                                <label for="name" class="block text-gray-300 mb-2 text-sm sm:text-base">Your
+                                    Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all text-sm sm:text-base">
                             </div>
                             <div>
-                                <label for="email" class="block text-gray-300 mb-2">Your Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all">
+                                <label for="email" class="block text-gray-300 mb-2 text-sm sm:text-base">Your
+                                    Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all text-sm sm:text-base">
                             </div>
                         </div>
                         <div>
-                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all">
+                            <label for="subject" class="block text-gray-300 mb-2 text-sm sm:text-base">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all text-sm sm:text-base">
                         </div>
                         <div>
-                            <label for="message" class="block text-gray-300 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all"></textarea>
+                            <label for="message" class="block text-gray-300 mb-2 text-sm sm:text-base">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500 transition-all text-sm sm:text-base"></textarea>
                         </div>
-                        <button type="submit" class="w-full px-6 py-4 bg-gradient-to-r from-primary to-secondary rounded-lg text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30">
+                        <button type="submit"
+                            class="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary rounded-lg text-dark font-bold hover-grow transition-all hover:shadow-lg hover:shadow-cyan-500/30 text-sm sm:text-base">
                             Send Message
                         </button>
                     </form>
@@ -524,13 +537,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 bg-dark border-t border-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <a href="#" class="text-2xl font-bold gradient-text hover-glow">REZA.Dev<span class="text-white"></span></a>
+    <footer class="py-8 sm:py-10 bg-dark border-t border-gray-800 px-4 sm:px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <div class="text-center sm:text-left">
+                    <a href="#" class="text-xl sm:text-2xl font-bold gradient-text hover-glow">REZA.Dev</a>
                 </div>
-                <div class=" font-bold gradient-text hover-glow text-sm">
+                <div class="font-bold gradient-text hover-glow text-xs sm:text-sm text-center">
                     &copy; 2024 Reza Perdana Herdiansyah. All rights reserved.
                 </div>
             </div>
@@ -543,8 +556,10 @@
     id="back-to-top">
     <i data-feather="arrow-up" class="w-5 h-5 text-primary"></i>
 </a> -->
-
-     <script src="/backend/route/contact.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="/backend/route/contact.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
